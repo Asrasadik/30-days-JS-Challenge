@@ -1,5 +1,5 @@
 let add = 2 + 5;
-console.log(a);
+console.log(add);
 let sub = 10 - 3;
 console.log(sub);
 let multi = 4 * 5;
