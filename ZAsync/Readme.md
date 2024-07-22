@@ -2,7 +2,23 @@
 
 - Js is synchronous by default
 - its single threaded (every thing will be executed in one thread)
-- then we might think it will be slow language 
+- then we might think it will be slow language.
+- Blocking Code v/s Non-Blocking Code:
+![Blocking/nonblocking](image-9.png)
+- as if we are asking "I will go fetch water till then you can't do anything"
+- "I will go fetch water till then you can perform your tasks"
+- ex: Read file system - node.js (blocking) 
+- read file async - non blocking
+- In case we have a screario to read userdata and sussefull message that "registeration is successful", in this case we need synchronous, ortherwise in non-blocking approach till user data is fetched give success message which would be wrong.
+- there is seperate use case for both 
+![JS Engine Diagram](image-10.png)
+- <b style="color:#B0FF92">Js engine</b> consists of memory heap and call stack.
+- however in execution environment like in browser, node.js, deno there won't be alone JS Engine.
+- <b style="color:#B0FF92">web Api:</b> present in browser (DOM API)
+- there will be some environment along with webAPI (i.e node)
+- <b style="color:#B0FF92">Task Queue:</b>
+
+
 
 
 
@@ -14,7 +30,7 @@
 - everything in JS happens inside Execution context
 - we can assume it as a big box or container in which whole JS code is executed <br>
 
-credits:https://excalidraw.com/
+credits:https://excalidraw.com/ <br>
 ![alt text](image-7.png)
 - memory component also known as variable environment is the place where all the variables and functions are stored as key-value pairs.
 - code component also know as thread of execution is the place where code is executed one line at a time 
@@ -41,9 +57,10 @@ credits:https://excalidraw.com/
     - whenever a function is invoked, an altogether new execution context is created and again 2 phases involved- for function parameters, variables and functions involved if any.
     - till now the whole program was inside global execution context. <br>
     <img src="./image.png" alt="new execution context for Function" width="300" height="200">
-    - Phase 1 for function:
-    ![alt text](image-1.png)
-    - phase 2 for function:
+    <br>
+    - Phase 1 for function: <br>
+    <img src="./image-1.png" alt="new execution context for Function" width="300" height="200">
+    - phase 2 for function:<br>
     ![alt text](image-2.png)
     - return will just return control back to the execution condext where the function was invoked.
     ![alt text](image-3.png)
