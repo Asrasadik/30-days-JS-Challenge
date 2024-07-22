@@ -9,6 +9,7 @@
 
 
 
+
 <br>Execution context: <br>
 - everything in JS happens inside Execution context
 - we can assume it as a big box or container in which whole JS code is executed <br>
@@ -17,8 +18,8 @@ credits:https://excalidraw.com/
 ![alt text](image-7.png)
 - memory component also known as variable environment is the place where all the variables and functions are stored as key-value pairs.
 - code component also know as thread of execution is the place where code is executed one line at a time 
-- JS is cynchronous single threaded lanuage that means it can only execute one command at time and in a specific order. that means it can only go to next line if current line is finished executing 
-- what happens when you run a JS program? - an execution context is created.
+- <b style="color:#E0EEC6">JS is synchronous single threaded lanuage that means it can only execute one command at time and in a specific order. that means it can only go to next line if current line is finished executing </b>
+- what happens when you run a JS program? - an execution context is created<br>.
 ![code snippet](image-8.png)
 - when we run above code a global execution context is created
 - [diagram]
