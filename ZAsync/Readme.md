@@ -16,7 +16,18 @@
 - however in execution environment like in browser, node.js, deno there won't be alone JS Engine.
 - <b style="color:#B0FF92">⛳ web Api:</b> present in browser (DOM API)
 - there will be some environment along with webAPI (i.e node)
-- <b style="color:#B0FF92">⛳ Task Queue:</b>
+- <b style="color:#B0FF92">⛳ Task Queue:</b><br>
+ ![alt text](image-11.png)
+- In case of Promise: there is seperate queue for promise which is called 🚀<b>high priority Queue</b>.
+- ex: setTimeOut :
+    - which will be available in Web API or node API.
+    - There is register callback in that it will get registered that particular task to be performed after 2sec etc.(or event on button click).
+    - Task Queue(FIFO): since program exit from JS engine for setTimeOut execution, we need to go back to JS engine to excute, but how? as there are many other tasks lined up. 
+    - Register call back sayes whenever there is such event (Async), it adds its callbacks(btn event, set timeout) in queue
+    - Then Task Queue handles callbacks lined up, it adds all those into call stack. (adds at the top) then it executed.
+    - setTimeOut(0): (0,[0,2],3) console 2 after 0 time, as setTimeout is callback it goes to seperate process till then (in that duration) 3 will be executed.
+    - Fetch(promise): it created another task queue with is of high priority which makes it difference.
+    -  
 
 
 
