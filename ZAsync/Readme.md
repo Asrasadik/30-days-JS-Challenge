@@ -14,23 +14,23 @@
 - we can assume it as a big box or container in which whole JS code is executed <br>
 
 credits:https://excalidraw.com/
-![alt text](./images/image-1.png)
-[diagram]
+![alt text](image-7.png)
 - memory component also known as variable environment is the place where all the variables and functions are stored as key-value pairs.
 - code component also know as thread of execution is the place where code is executed one line at a time 
 - JS is cynchronous single threaded lanuage that means it can only execute one command at time and in a specific order. that means it can only go to next line if current line is finished executing 
 - what happens when you run a JS program? - an execution context is created.
-- ![alt text](./images/image.png)
+![code snippet](image-8.png)
 - when we run above code a global execution context is created
 - [diagram]
 - this execution context is created in two phases 
 1. First phase is - creation phase / memory creation phase which is critical phase
-![alt text](./images/image-2.png)
+![Phase 1](image-6.png)
     - JS will allocate memory to all the variables and functions
     - as soon as JS encounters line 1, it allocates memory to 'n'.
     - now JS goes to line 2 so it sees that there is also a function which is named as square, so it will allocate memory to square. 
     - so what does memory stores? its stores a special value which is known as undefined as square, square2, square4 are variables.
     - in case of function it stored the whole code of functione from line 2- 5 in memory space.
+    ![alt text](image-5.png)
     - to summarize in first face JS goes through the code line by line and allocate memory to all variables and functions. 
 2. 2nd Phase: code execution phase:
     - now JS once again runs through whole JS code, and it executes the code now 
