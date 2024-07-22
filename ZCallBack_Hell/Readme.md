@@ -2,7 +2,7 @@
 1. Advantages of Callbacks
 2. Disadvantages of callbacks
     - CallBack Hell
-    - Inversion of control
+    - Inversion of control.
 
 ### Advantages of Callbacks
 - callback plays very important role in Async JS.
