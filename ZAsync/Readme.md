@@ -3,21 +3,23 @@
 - Js is synchronous by default
 - its single threaded (every thing will be executed in one thread)
 - then we might think it will be slow language.
-- Blocking Code v/s Non-Blocking Code:
-![Blocking/nonblocking](image-9.png)
+- Blocking Code v/s Non-Blocking Code:<br>
+<img src="./image-9.png" alt="Blocking/nonblocking" width="300" height="200">
+<br>
 - as if we are asking "I will go fetch water till then you can't do anything"
 - "I will go fetch water till then you can perform your tasks"
 - ex: Read file system - node.js (blocking) 
 - read file async - non blocking
 - In case we have a screario to read userdata and sussefull message that "registeration is successful", in this case we need synchronous, ortherwise in non-blocking approach till user data is fetched give success message which would be wrong.
-- there is seperate use case for both 
-![JS Engine Diagram](image-10.png)
+- there is seperate use case for both <br>
+<img src="./image-10.png" alt="JS Engine Diagram" width="300" height="200">
+<br>
 - <span style="color: #B0FF92; font-weight: bold;">⛳Js engine</span> consists of memory heap and call stack.
 - however in execution environment like in browser, node.js, deno there won't be alone JS Engine.
 - <b style="color:#B0FF92">⛳ web Api:</b> present in browser (DOM API)
 - there will be some environment along with webAPI (i.e node)
 - <b style="color:#B0FF92">⛳ Task Queue:</b><br>
- ![alt text](image-11.png)
+<img src="./image-11.png" alt="JS Engine Diagram" width="450" height="300"> <br>
 - In case of Promise: there is seperate queue for promise which is called 🚀<b>high priority Queue</b>.
 - ex: setTimeOut :
     - which will be available in Web API or node API.
