@@ -1,6 +1,6 @@
 const btnId = document.getElementById('btnId');
 const removebtnId = document.getElementById('removeBtnId');
-const modifyBtnId = document.getElementById('modifyBtnId');
+//const modifyBtnId = document.getElementById('modifyBtnId');
 const textId = document.getElementById('mainTextId');
 const activityId = document.getElementsByClassName('activity')[0];
 const items = document.getElementById('listId');
@@ -53,6 +53,6 @@ onMouseLeave = () => {
 onModifyClick = () => {};
 btnId.addEventListener('click', () => onComplete(textId, activityId));
 removebtnId.addEventListener('click', onRemoveClick);
-modifyBtnId.addEventListener('click', onModifyClick);
+//modifyBtnId.addEventListener('click', onModifyClick);
 imageId.addEventListener('mouseenter', onMouseEnter);
 imageId.addEventListener('mouseleave', onMouseLeave);
