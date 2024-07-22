@@ -12,11 +12,11 @@
 - In case we have a screario to read userdata and sussefull message that "registeration is successful", in this case we need synchronous, ortherwise in non-blocking approach till user data is fetched give success message which would be wrong.
 - there is seperate use case for both 
 ![JS Engine Diagram](image-10.png)
-- <span style="color: #B0FF92; font-weight: bold;">Js engine</span> consists of memory heap and call stack.
+- <span style="color: #B0FF92; font-weight: bold;">⛳Js engine</span> consists of memory heap and call stack.
 - however in execution environment like in browser, node.js, deno there won't be alone JS Engine.
-- <b style="color:#B0FF92">web Api:</b> present in browser (DOM API)
+- <b style="color:#B0FF92">⛳ web Api:</b> present in browser (DOM API)
 - there will be some environment along with webAPI (i.e node)
-- <b style="color:#B0FF92">Task Queue:</b>
+- <b style="color:#B0FF92">⛳ Task Queue:</b>
 
 
 
