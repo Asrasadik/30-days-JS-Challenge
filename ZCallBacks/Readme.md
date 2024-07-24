@@ -1,4 +1,4 @@
-# CallBasks 
+# CallBacks 
 
 ### Topics:
 - what is callback function in JS
@@ -74,7 +74,7 @@ attachEventListener();
 - [event listener screenshot : 17:42] <br>
 ![alt text](image-1.png)
 ![alt text](image-2.png)
-- 
+- In above we can see global and closure scope
 ### Garbage collection and removeEventListeners.
 - why do we remove event listeners?
     - they are heavy that means it takes memory

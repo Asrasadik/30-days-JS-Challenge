@@ -6,7 +6,7 @@ const promise1 = new Promise(function (resolve, reject) {
   setTimeout(function () {
     console.log("Async Task is complete");
     resolve(); //this needs to be called if .then() needs to be executed
-  }, 2000);
+  }, 1000);
 }); // promise accepts a callback
 //consume Promise
 promise1.then(function () {
