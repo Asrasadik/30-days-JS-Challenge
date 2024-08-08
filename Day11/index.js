@@ -8,6 +8,7 @@
 const basicPromise = new Promise(function(resolve,reject){
   timeOut(resolve);
 })
+console.log(basicPromise)
 basicPromise.then(()=>console.log("promise resolved"))
 //Activity1.2
 const validate = (resolve,reject)=>{
@@ -117,27 +118,27 @@ getConvertedValue(aItems)
     console.log("getConvertedValue.catch");
   });
 */
-const promiseRace1 = new Promise(function(resolve,reject){
-  setTimeout(()=>{
+const promiseRace1 = new Promise(function (resolve, reject) {
+  setTimeout(() => {
     //console.log("promiseRace1");
     resolve("promiseRace1");
-  },2000)
-})
+  }, 2000);
+});
 
-const promiseRace2 = new Promise(function(resolve,reject){
-  setTimeout(()=>{
-   // console.log("promiseRace2");
+const promiseRace2 = new Promise(function (resolve, reject) {
+  setTimeout(() => {
+    // console.log("promiseRace2");
     resolve("promiseRace1");
-  },1000)
-})
+  }, 1000);
+});
 
-const promiseRace3 = new Promise(function(resolve,reject){
-  setTimeout(()=>{
-  //  console.log("promiseRace3");
+const promiseRace3 = new Promise(function (resolve, reject) {
+  setTimeout(() => {
+    //  console.log("promiseRace3");
     resolve("promiseRace1");
-  },3000)
-})
+  }, 3000);
+});
 
 Promise.race([promiseRace2, promiseRace1, promiseRace3])
-.then((msg)=>console.log(msg))
-.catch((err)=>console.log(err.message))
+  .then((msg) => console.log(msg))
+  .catch((err) => console.log(err.message));
