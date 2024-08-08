@@ -21,7 +21,7 @@ new Promise(function (resolve, reject) {
 }).then(function () {
   console.log("Async 2 Resolved");
 });
-
+//passing data from resolve 
 const promise3 = new Promise(function (resolve, reject) {
   setTimeout(function () {
     console.log("Async Task is complete-promise3");

@@ -44,3 +44,7 @@ Chai aur code 30days JS challenge
 - modifying style
 - event listerners
 
+## Day 11:
+-  Promise basic
+-  Chaining of Promises
+-  
