@@ -47,4 +47,16 @@ Chai aur code 30days JS challenge
 ## Day 11:
 -  Promise basic
 -  Chaining of Promises
--  
+
+## Day 12:
+- Custom error Classes
+
+## Day 13:
+- modules in JS (in progress ⚡⚙️)
+
+## Day 14: 
+- classes
+- Inheritance
+- getters and setters
+
+## 
