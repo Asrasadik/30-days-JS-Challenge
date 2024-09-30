@@ -117,13 +117,11 @@ a()
 <img src="./image-1.png" alt="call stack during debugging" width="300" height="300">
 <br>
 
-
 - in above image we can see function a(), b() in call stack, and x will be undefined.
 
 <br>
 <img src="./image-3.png" alt="call stack during debugging" width="300" height="300">
 <br>
-
 
 - in above image we can see that execution context for a() is created. and we can see local and global scope.
 - ⭐ note that there is this: window in local scope (will be discussed later).
@@ -137,24 +135,28 @@ a()
 - and it still creates global execution context also sets up the memory space.
 - It also creates **"window"**
 - there is "this" object as weel, at the global level it points to the window object.
--  what is window?: <br>
-it is a global object which is created along the global execution context<br>
-In JavaScript, the window object represents the global context of a web page in a browser. It's the top-level object that contains everything else, including variables, functions, and the Document Object Model (DOM). The window object gives access to properties, methods, and events that can interact with the browser window itself.<br>
+- what is window?: <br>
+  it is a global object which is created along the global execution context<br>
+  In JavaScript, the window object represents the global context of a web page in a browser. It's the top-level object that contains everything else, including variables, functions, and the Document Object Model (DOM). The window object gives access to properties, methods, and events that can interact with the browser window itself.<br>
 - "this" object at the global level points to the window object.
 - Global object incase of browsers is know as window.
 - all JS engines has a responsibility to create global object.
 - in case of node.js its global
+
 ```
 this === window
 o/p: true
 ```
+
 consider below example
+
 ```
 var a =10;
 function b(){
   var x = 10;
 }
 ```
+
 - in above example, variable 'a' is in global space, variable x is in local space as its inside function.
 - console.log(window.a) is same as console.log(a)
 - in console.log(a) its automatically assume that we are refering to global space (Window).
@@ -166,6 +168,7 @@ function b(){
 }
 console.log(x)
 ```
+
 - above code produces error: ReferenceError: x is not defined
 
 ```
@@ -178,8 +181,10 @@ console.log(window.a);
 console.log(a);
 console.log(this.a);
 ```
+
 - window.a, a, this.a are all same in global space
 
+### Conslusion ⭐:
 
-
-
+- conclusion of how JS is executed: <br>
+  it creates GEC, and allocates memory to all variables and functions, even before a signle line of code is executed
