@@ -60,3 +60,4 @@ Chai aur code 30days JS challenge
 - getters and setters
 
 ## Day 15:
+- closures
