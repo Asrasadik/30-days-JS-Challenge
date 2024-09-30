@@ -61,3 +61,4 @@ Chai aur code 30days JS challenge
 
 ## Day 15:
 - closures
+- examples with closures
