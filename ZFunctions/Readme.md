@@ -16,12 +16,14 @@ function b() {
   console.log(x);
 }
 ```
+
 ```
 output:
 10
 100
 1
 ```
+
 image1: GEC
 <br>
 <img src="./Images/image.png" alt="Blocking/nonblocking" width="300" height="200">
@@ -30,6 +32,7 @@ image1: GEC
 - **call stack is a stack where all global execution context are kept.**
 - when we create create global execution context it will be pushed into the call stack (as in above image).
 - now, when we execute code, during the first line.
+
 ```
 var x = 1
 ```
@@ -44,6 +47,7 @@ var x = 1
 
 - now x becomes 2.
 - now code moves to 2nd line.
+
 ```
 a()
 ```
@@ -83,19 +87,18 @@ a()
 
 - now we have finished executing function a(). The whole execution context of function a() will be deleted. also it will be poped out of call stack (as in above image).
 - then control goes to line 3.
-overview of function b():
-<br>
-<img src="./image_5.png" alt="Execution context for a()" width="300" height="200">
-<br>
+  overview of function b():
+  <br>
+  <img src="./image_5.png" alt="Execution context for a()" width="300" height="200">
+  <br>
 
--  again execution context for function b() will be created and steps will be repeated and execution context for b() will be deleted also from call stack(as in above image).
-
+- again execution context for function b() will be created and steps will be repeated and execution context for b() will be deleted also from call stack(as in above image).
 
 <br>
 <img src="./image_6.png" alt="Execution context for a()" width="300" height="200">
 <br>
 
--  then  control comes back to Global Execution Context (line 4).
+- then control comes back to Global Execution Context (line 4).
 - as there is console.log(x), JS engine will for x in local space/memory of that particular execution context( that is GEC).
 - here value of x is 1, so it will be printed in console ( that is 1 will be printed).
 - now control moves to next line it see that there is nothing more to execute.
@@ -105,4 +108,32 @@ overview of function b():
 <br>
 
 - once whole code has been executed, the main execution context will also be deleted and also popped out off call stack.
+
+<br>
+<img src="./image-2.png" alt="call stack during debugging" width="300" height="300">
+<br>
+
+<br>
+<img src="./image-1.png" alt="call stack during debugging" width="300" height="300">
+<br>
+
+
+- in above image we can see function a(), b() in call stack, and x will be undefined.
+
+<br>
+<img src="./image-3.png" alt="call stack during debugging" width="300" height="300">
+<br>
+
+
+- in above image we can see that execution context for a() is created. and we can see local and global scope.
+- ⭐ note that there is this: window in local scope (will be discussed later).
+
+- we can see above explaination in call stack while debugging.
+
+# Shortest JavaScript Program 💥
+
+- An empty js file is the shortest JS program.
+- even though there is no code in js file javascript engine will still do its work.
+- and it still creates global execution context also sets up the memory space.
+- It also creates **"window"**
 
